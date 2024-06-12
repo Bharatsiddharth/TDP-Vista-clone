@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    /* font-family: Lato Arial sans-serif; */
+}
+
+.main section .page1{
+    width:100%;
+    
+    background-image: url(https://studios.tdpvista.in/static/media/land-back.cda748f0.png);
+    /* background-repeat: no-repeat; */
+    background-position: 12% 45%;
+}
+
+
+.main section .page2{
+    width:100%;
+    /* background-image: url(https://studios.tdpvista.in/static/media/sect-2.6da46748.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 10% 45%; */
+}
+
+
+/* .left-page1{
+    background-image: url("https://studios.tdpvista.in/static/media/land-component.a363bdda.png");
+} */
+
+.span-h1{
+    color: #d2ab54;
+}
+
+.button-6 {
+    transition: all 0.3s ease;
+}
+.button-6:hover {
+    transform: scale(1.05);
+    background-color: #d2ab54;;
+}
+
+
+
+
+
+
+
+.upper-card-1, .lower-card-1 {
+    transition: transform 0.5s ease;
+}
+.card-1 {
+    position: relative;
+    /* overflow: hidden; */
+}

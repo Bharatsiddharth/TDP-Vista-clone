@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+
+    <div class="main">
+       
+
+        <section>
+            <div class="page1 bg-red-700">
+
+                <!-- <img class="absolute " src="https://studios.tdpvista.in/static/media/land-back.cda748f0.png" alt=""> -->
+
+                <nav class="py-3 ">
+                    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                        <div class="relative flex h-16 items-center justify-between">
+                            <!-- Logo Section -->
+                            <div class="flex flex-1 items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="h-10 w-auto" src="https://studios.tdpvista.in/static/media/logo.60785d8d.png" alt="Logo">
+                                </div>
+                            </div>
+                            <!-- Menu Section -->
+                            <div class="hidden sm:ml-6 sm:block">
+                                <div class="flex space-x-4">
+                                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-yellow-500">Home</a>
+                                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-yellow-500">Register</a>
+                                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-yellow-500">Subscribe</a>
+                                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-yellow-500">About</a>
+                                    <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-yellow-500">Support</a>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu Button -->
+                            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                                <button type="button" onclick="toggleMobileMenu()" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                                    <span class="absolute -inset-0.5"></span>
+                                    <span class="sr-only">Open main menu</span>
+                                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Mobile menu, show/hide based on menu state. -->
+                    <div class="sm:hidden hidden" id="mobile-menu">
+                        <div class="space-y-1 px-2 pb-3 pt-2">
+                            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-500">Register</a>
+                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-500">Subscribe</a>
+                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-500">About</a>
+                            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-500">Support</a>
+                        </div>
+                    </div>
+                </nav>
+               
+                
+                <div class="content-page1 content h-[124vh] w-full">
+                    
+                    <div class="left-page1 bg-red-800 relative">
+                        <img class="img1 ml-20 absolute h-[90vh] w-[90vh] max-w-[650px]:h-[70vh] max-w-[650px]:w-[60vh] max-w-[650px]:ml-0" src="https://studios.tdpvista.in/static/media/land-component.a363bdda.png" alt="">
+                        <img class="absolute z-10 m-20 max-[650px]:hidden" src="https://studios.tdpvista.in/static/media/logo.60785d8d.png" alt="">
+                    </div>
+                    <div class="right-page1 text-white absolute mt-[15vh] flex flex-col gap-4 right-[10.4vw] max-w-[650px]:right-[5vw]">
+                        <h1 class="bg-red-800 text-[8vh] text-end max-w-[650px]:text-[5vh]">
+                            <span class="span-h1">BE THE PART </span>OF
+                            <br> creative
+                            <br> <span class="span-h1">comm</span>unity
+                        </h1>
+                        <button class="button-6 ml-[22vw] border px-8 text-white py-2 rounded max-w-[650px]:ml-0" role="button">NOW</button>
+                        <h3 class="bg-red-800 text-[1.3vw] font-semibold text-end max-w-[650px]:text-[2.5vh]">and give a spark to your passion</h3>
+                    </div>
+                </div> 
+
+            </div>
+        </section>
+
+        <section>
+            <div class="page2 flex">
+                <div class="left-page2 bg-gray-400 gap-28 p-20 pl-64 flex flex-col ">
+                    <div class="btn1 w-[25vw] py-2 bg-[#C9A544] border-[2px] border-transparent font-semibold hover:bg-slate-900 hover:text-[#C9A544] hover:border-[2px] hover:border-[#C9A544] flex gap-10 justify-center items-center text-end  rounded-full overflow-hidden relative">
+                        <h2 class="relative text-[1.5vw] z-10">Express Your <br>Passion</h2>
+                        <svg class="h-[10vh] w-[5vw] relative z-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" class="svg-inline--fa fa-newspaper fa-w-18 fa-3x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-[#d2ab54] transition-transform duration-500 ease-out transform translate-x-[-100%] btn1-hover"></div>
+                    </div>
+
+                    <div class="btn1 w-[25vw] py-2 bg-[#C9A544] border-[2px] border-transparent font-semibold hover:bg-slate-900 hover:text-[#C9A544] hover:border-[2px] hover:border-[#C9A544] flex gap-10 justify-center items-center text-end  rounded-full overflow-hidden relative">
+                        <h2 class="relative text-[1.5vw] z-10">Show Your<br>Talent</h2>
+                        <svg class="h-[10vh] w-[5vw] relative z-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" class="svg-inline--fa fa-newspaper fa-w-18 fa-3x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-[#d2ab54] transition-transform duration-500 ease-out transform translate-x-[-100%] btn1-hover"></div>
+                    </div>
+
+                    <div class="btn1 w-[25vw] py-2 bg-[#C9A544] border-[2px] border-transparent font-semibold hover:bg-slate-900 hover:text-[#C9A544] hover:border-[2px] hover:border-[#C9A544] flex gap-10 justify-center items-center text-end  rounded-full overflow-hidden relative">
+                        <h2 class="relative text-[1.5vw] z-10">Develop Your<br>Presence</h2>
+                        <svg class="h-[10vh] w-[5vw] relative z-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="newspaper" class="svg-inline--fa fa-newspaper fa-w-18 fa-3x " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path fill="currentColor" d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-[#d2ab54] transition-transform duration-500 ease-out transform translate-x-[-100%] btn1-hover"></div>
+                    </div>
+                </div>
+
+                <h1 class="p-52 font-semibold text-[5vw] text-center">WALL <br> OF <br> PASSION </h1>
+
+            </div>
+        </section>
+
+
+
+
+        <section>
+
+            <div class="page3">
+                <h1 class="text-center text-6xl py-2 mt-28 ">Featuring Service</h1>
+                <h3 class="text-center text-x">Service Bundle of TDPVista Studios</h3>
+
+                <div class="card-page3 pt-[15vh] flex gap-[25vw] px-32 pb-[44vh] bg-blue-600">
+                    <div class="card-1 p-7 pb-14 relative">
+                        <div class="upper-card-1 absolute z-10 flex items-center justify-center text-3xl h-[27vh] w-[22vw] bg-slate-400">
+                            <h1>Team</h1>
+                        </div>
+                        <div class="lower-card-1 absolute h-[27vh] flex items-center justify-center w-[22vw] bg-slate-900">
+                            <p class="text-white text-center">Helps you to build professional family by bringing together innovative and creative people from your field connect grow and transform your life.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card2 p-7 pb-14 relative">
+                        <div class="upper-card2 absolute z-10 flex items-center justify-center text-3xl h-[27vh] w-[22vw] bg-slate-400">
+                            <h1>Team</h1>
+                        </div>
+                        <div class="lower-card2 absolute h-[27vh] flex items-center justify-center w-[22vw] bg-slate-900">
+                            <p class="text-white text-center">Helps you to build professional family by bringing together innovative and creative people from your field connect grow and transform your life.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card3 p-7 pb-14 relative">
+                        <div class="upper-card3 absolute z-10 flex items-center justify-center text-3xl h-[27vh] w-[22vw] bg-slate-400">
+                            <h1>Team</h1>
+                        </div>
+                        <div class="lower-card3 absolute h-[27vh] flex items-center justify-center w-[22vw] bg-slate-900">
+                            <p class="text-white text-center">Helps you to build professional family by bringing together innovative and creative people from your field connect grow and transform your life.</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+
+            </div>
+
+        </section>
+
+        
+
+    </div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
