@@ -134,48 +134,53 @@ document.querySelector(".cards-page3").innerHTML = clutter;
 blogs()
 
 
-//page 1 animation
+// Animation start here
 
-let tl = gsap.timeline();
-
+function page1Animation(){
+    let tl = gsap.timeline();
+    
 tl.from(".nav-img", {
-  y: -100,
-  duration: 1, // Increased duration for more drama
-  opacity: 0,
-  stagger: 0.3,
-  ease: "power2.inOut" // Changed easing for a different effect
-});
-
-tl.from(".nav-elem a", {
-  x: 100,
-  duration: 1, // Increased duration for more drama
-  opacity: 0,
-  stagger: 0.3,
-  ease: "power2.inOut" // Changed easing for a different effect
-});
-
-// let tl = gsap.timeline();
-
-tl.from(".img2-page1", {
     y: -100,
-  scale: 0.8, // Slightly less dramatic scale effect
-  duration: 0.6, // Shorter duration for simplicity
-  opacity: 0,
-  stagger: 0.2, // Faster stagger for a quicker sequence
-  ease: "power1.out" // Smooth easing without the bounce
-});
+    duration: 1, // Increased duration for more drama
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut" // Changed easing for a different effect
+  });
+  
+  tl.from(".nav-elem a", {
+    x: 100,
+    duration: 1, // Increased duration for more drama
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut" // Changed easing for a different effect
+  });
+  
+  // let tl = gsap.timeline();
+  
+  tl.from(".img2-page1", {
+      y: -100,
+    scale: 0.8, // Slightly less dramatic scale effect
+    duration: 0.6, // Shorter duration for simplicity
+    opacity: 0,
+    stagger: 0.2, // Faster stagger for a quicker sequence
+    ease: "power1.out" // Smooth easing without the bounce
+  });
+  
+  tl.from(".right-page1", {
+    y: -100, // Less dramatic movement
+    scale: 0.8, // Slightly less dramatic scale effect
+    duration: 0.6, // Shorter duration for simplicity
+    opacity: 0,
+    stagger: 0.2, // Faster stagger for a quicker sequence
+    ease: "power1.out" // Smooth easing without the bounce
+  });
+}
 
-tl.from(".right-page1", {
-  y: -100, // Less dramatic movement
-  scale: 0.8, // Slightly less dramatic scale effect
-  duration: 0.6, // Shorter duration for simplicity
-  opacity: 0,
-  stagger: 0.2, // Faster stagger for a quicker sequence
-  ease: "power1.out" // Smooth easing without the bounce
-});
+page1Animation();
 
 
-
+function page2Animation(){
+    
 // ScrollTrigger for triggering animations on scroll
 gsap.registerPlugin(ScrollTrigger);
 
@@ -211,22 +216,115 @@ gsap.from(".page2 h1 span", {
     }
 });
 
+}
 
+page2Animation();
 
+function page3Animation(){
+    gsap.from(".page3 .heading-page3", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        stagger: 0.3,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: ".page3 .heading-page3",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+            // markers: true
+        }
+    });
+    
+    
+    
+    gsap.from(".page3 .card-1,.card2,.card3", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        stagger: 0.3,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: ".page3 .card-1,.card2,.card3",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+            // markers: true
+        }
+    });
+}
 
-//page 3 animation
+page3Animation();
 
-
-
-// Animation for .page2 h1 span
-gsap.from(".page3 .heading-page3", {
+function page4Animation(){
+    
+gsap.from(".page4 .heading-page4,.card1-page4", {
     y: 100,
     duration: 1,
     opacity: 0,
     stagger: 0.3,
     ease: "power2.inOut",
     scrollTrigger: {
-        trigger: ".page3 .heading-page3",
+        trigger: ".page4 .heading-page4,.card1-page4",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+}
+
+page4Animation();
+
+function page5Animation(){
+    gsap.from(".page5 .main-circle,.content-page5", {
+        y: 100,
+        duration: 1,
+        opacity: 0,
+        // stagger: 0.3,
+        ease: "power2.inOut",
+        scrollTrigger: {
+            trigger: ".page5 .main-circle,.content-page5",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+            // markers: true
+        }
+    });
+
+
+    
+gsap.from(".container-page5 .content-bottom-page5,.image-page5", {
+    y: 50,
+    duration: 1,
+    opacity: 0,
+    // stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".container-page5 .content-bottom-page5,.image-page5",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+}
+
+page5Animation();
+
+
+function footerAnimation(){
+    
+gsap.from(".top-footer .loc", {
+    // y: 100,
+    duration: 1,
+    stagger: 0.3,
+    opacity: 0,
+    // stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".container-page5 .content-bottom-page5,.image-page5",
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "play none none reverse",
@@ -235,56 +333,21 @@ gsap.from(".page3 .heading-page3", {
 });
 
 
-
-gsap.from(".page3 .card-1,.card2,.card3", {
-    y: 100,
+gsap.from(".footer-bottom .content,.links ,.form-page5,.bottom-linefooter", {
+    // y: 100,
     duration: 1,
-    opacity: 0,
     stagger: 0.3,
+    opacity: 0,
+    // stagger: 0.3,
     ease: "power2.inOut",
     scrollTrigger: {
-        trigger: ".page3 .card-1,.card2,.card3",
+        trigger: ".footer-bottom .content,.links ,.form-page5,.bottom-linefooter",
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "play none none reverse",
         // markers: true
     }
 });
+}
 
-
-
-
-gsap.from(".page4 .heading-page4", {
-    y: 100,
-    duration: 1,
-    opacity: 0,
-    stagger: 0.3,
-    ease: "power2.inOut",
-    scrollTrigger: {
-        trigger: ".page4 .heading-page4",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
-        // markers: true
-    }
-});
-
-
-gsap.from(".page4 .card1-page4", {
-    y: 100,
-    duration: 1,
-    opacity: 0,
-    stagger: 0.3,
-    ease: "power2.inOut",
-    scrollTrigger: {
-        trigger: ".page4 .card1-page4",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "play none none reverse",
-        // markers: true
-    }
-});
-
-
-
-
+footerAnimation();
