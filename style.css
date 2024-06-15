@@ -45,15 +45,12 @@ html,body{
     background-color: #d2ab54;
 }
 
-.card1-page3{
+.card1-page4{
     transition: background 0.5s ease-in-out, border 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Adding transition for smooth animation */
     color: #c9a544;
 }
 
-.card1-page3:hover{
-    border: 1px solid #000000; /* A dark gray border instead of white */
-
-    /* background: linear-gradient(145deg, rgba(20, 20, 20, 0.8), rgba(10, 10, 10, 0.5)); Darker gradient colors */
+.card1-page4:hover{
     box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.6), /* Reduced darker shadow */
                 -16px -16px 20px rgba(50, 50, 50, 0.5);
 
@@ -71,10 +68,14 @@ html,body{
 
 
 .page5 .circle {
-    transition: all .85s cubic-bezier(.25,1,.33,1);; /* Adding transition for smooth animation */
+    transition: all .85s cubic-bezier(.25,1,.33,1);
 }
 
 .page5 .circle:hover {
-    width: 10vw;
-    height: 10vw;
+    width: 12rem;
+    height: 12rem;
+}
+
+.upper-card-1{
+    transition: all .85s ease-in-out;
 }

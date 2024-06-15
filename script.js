@@ -1,39 +1,4 @@
-function loco(){
-    
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-    
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".main"),
-      smooth: true
-    });
-    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-    locoScroll.on("scroll", ScrollTrigger.update);
-    
-    // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
-    ScrollTrigger.scrollerProxy(".main", {
-      scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-      }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-      getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-      },
-      // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-      pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
-    });
-    
-    
-    
-    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    
-    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-    ScrollTrigger.refresh();
-    }
-    
-    
-    // loco();
+
 
 function toggleMobileMenu() {
     var menu = document.getElementById("mobile-menu");
@@ -48,9 +13,15 @@ var card = document.querySelector(".card-1,.upper-card-1,.lower-card-1");
 var topElement = document.querySelector(".upper-card-1");
 var bottomElement = document.querySelector(".lower-card-1");
 
+
+
 card.addEventListener("mouseenter", function() {
     topElement.style.transform = "translateY(-13vh)"; 
-    topElement.style.backgroundColor = "#d2ab54";
+    // topElement.style.backgroundColor = "#d2ab54";
+    topElement.style.backgroundImage = "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+    topElement.style.backgroundPosition = "center"
+    topElement.style.backgroundSize = "contain"
+    topElement.style.color = "black"
     bottomElement.style.transform = "translateY(13vh)";
     topElement.style.transition = "transform 0.5s ease";
     bottomElement.style.transition = "transform 0.5s ease";
@@ -58,9 +29,11 @@ card.addEventListener("mouseenter", function() {
 
 card.addEventListener("mouseleave", function() {
     topElement.style.transform = "translateY(0px)";
-    topElement.style.backgroundColor = "";
+    // topElement.style.backgroundColor = "";
    
-    bottomElement.style.transform = "translateY(0px)";  
+    bottomElement.style.transform = "translateY(0px)";
+    topElement.style.backgroundImage = "url(')" 
+    topElement.style.color = "white" 
 });
 
 
@@ -74,7 +47,11 @@ var bottomElement2 = document.querySelector(".lower-card2");
 
 card2.addEventListener("mouseenter", function() {
     topElement2.style.transform = "translateY(-13vh)"; 
-    topElement2.style.backgroundColor = "#d2ab54";
+    // topElement2.style.backgroundColor = "#d2ab54";
+    topElement2.style.backgroundImage = "url('https://images.unsplash.com/photo-1614332243412-00e687d0c898?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+    topElement2.style.color = "black"
+    topElement2.style.backgroundPosition = "center"
+    topElement2.style.backgroundSize = "contain"
     bottomElement2.style.transform = "translateY(13vh)";
     topElement2.style.transition = "transform 0.5s ease";
     bottomElement2.style.transition = "transform 0.5s ease";
@@ -84,6 +61,9 @@ card2.addEventListener("mouseleave", function() {
     topElement2.style.transform = "translateY(0px)";
     bottomElement2.style.transform = "translateY(0px)"; 
     topElement2.style.backgroundColor = ""; 
+    topElement2.style.backgroundImage = "url(')"
+    topElement2.style.color = "white"
+ 
 });
 
 var card3 = document.querySelector(".card3,.upper-card3,.lower-card3");
@@ -93,7 +73,11 @@ var bottomElement3 = document.querySelector(".lower-card3");
 
 card3.addEventListener("mouseenter", function() {
     topElement3.style.transform = "translateY(-13vh)"; 
-    topElement3.style.backgroundColor = "#d2ab54";
+    // topElement3.style.backgroundColor = "#d2ab54";
+    topElement3.style.backgroundImage = "url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+    topElement3.style.backgroundPosition = "center"
+    topElement3.style.backgroundSize = "contain"
+    topElement3.style.color = "black"
     bottomElement3.style.transform = "translateY(13vh)";
     topElement3.style.transition = "transform 0.5s ease";
     bottomElement3.style.transition = "transform 0.5s ease";
@@ -102,7 +86,9 @@ card3.addEventListener("mouseenter", function() {
 card3.addEventListener("mouseleave", function() {
     topElement3.style.transform = "translateY(0px)";
     bottomElement3.style.transform = "translateY(0px)";  
-    topElement3.style.backgroundColor = "";
+    // topElement3.style.backgroundColor = "";
+    topElement3.style.backgroundImage = "url(')"
+    topElement3.style.color = "white"
 });
 }
 
@@ -125,7 +111,7 @@ function blogs(){
   var clutter = '';
 
   cardsPage3.forEach(function(product,idx){
-  clutter += `<div class="card1-page3 py-8 mt-12 rounded-xl  w-[20rem] flex flex-col items-center gap-1 font-serif text-[1vw] bg-[#121420] p-8 font-thin text-center">
+  clutter += `<div class="card1-page4 py-8 mt-12 rounded-xl  w-[20rem] flex flex-col items-center gap-1 font-serif text-[1vw] bg-[#121420] p-8 font-thin text-center">
                     <img src="${product.logo}" alt="">
                     <h2 class="text-[1.2rem] text-[#c9a544]">${product.heading}</h2>
                     <h4 class="text-white text-[1rem]">${product.para}</h4>
@@ -146,3 +132,159 @@ document.querySelector(".cards-page3").innerHTML = clutter;
 }
 
 blogs()
+
+
+//page 1 animation
+
+let tl = gsap.timeline();
+
+tl.from(".nav-img", {
+  y: -100,
+  duration: 1, // Increased duration for more drama
+  opacity: 0,
+  stagger: 0.3,
+  ease: "power2.inOut" // Changed easing for a different effect
+});
+
+tl.from(".nav-elem a", {
+  x: 100,
+  duration: 1, // Increased duration for more drama
+  opacity: 0,
+  stagger: 0.3,
+  ease: "power2.inOut" // Changed easing for a different effect
+});
+
+// let tl = gsap.timeline();
+
+tl.from(".img2-page1", {
+    y: -100,
+  scale: 0.8, // Slightly less dramatic scale effect
+  duration: 0.6, // Shorter duration for simplicity
+  opacity: 0,
+  stagger: 0.2, // Faster stagger for a quicker sequence
+  ease: "power1.out" // Smooth easing without the bounce
+});
+
+tl.from(".right-page1", {
+  y: -100, // Less dramatic movement
+  scale: 0.8, // Slightly less dramatic scale effect
+  duration: 0.6, // Shorter duration for simplicity
+  opacity: 0,
+  stagger: 0.2, // Faster stagger for a quicker sequence
+  ease: "power1.out" // Smooth easing without the bounce
+});
+
+
+
+// ScrollTrigger for triggering animations on scroll
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation for .btn1
+gsap.from(".btn1", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".btn1",
+        start: "top 80%", // Trigger animation when top of the trigger element is 80% in view
+        end: "bottom 20%", // End animation when bottom of the trigger element is 20% in view
+        toggleActions: "play none none reverse", // Play animation when scrolling down, reverse when scrolling up
+        // markers: true // Add markers for visualization
+    }
+});
+
+// Animation for .page2 h1 span
+gsap.from(".page2 h1 span", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".page2 h1",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+
+
+
+//page 3 animation
+
+
+
+// Animation for .page2 h1 span
+gsap.from(".page3 .heading-page3", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".page3 .heading-page3",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+
+
+gsap.from(".page3 .card-1,.card2,.card3", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".page3 .card-1,.card2,.card3",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+
+
+
+gsap.from(".page4 .heading-page4", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".page4 .heading-page4",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+
+gsap.from(".page4 .card1-page4", {
+    y: 100,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power2.inOut",
+    scrollTrigger: {
+        trigger: ".page4 .card1-page4",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+        // markers: true
+    }
+});
+
+
+
+
